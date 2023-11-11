@@ -15,8 +15,8 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg py-4 bg-transparent fixed-top">
-        <div class="container text-white">
+    <nav class="navbar navbar-expand-md py-3 sticky-top navbar-dark">
+        <div class="container">
             <div class="d-flex justify-content-center align-items-center hstack gap-3 h2">
                 <a href="https://github.com/FlyBoy1998" class="text-white" target="_blank"><i
                         class="fa-brands fa-github"></i></a>
@@ -27,11 +27,11 @@
     </nav>
 
     <!-- Header -->
-    <header class="header vh-100">
+    <header class="header vh-100 position-relative">
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-6 offset-md-3 mt-8">
-                    <h1 class="text-white xl-text"><span class="fw-bold">Photos</span> based on category</h1>
+                <div class="col-md-6 offset-md-3 mt-5 mb-5">
+                    <h1 class="text-white display-3"><span class="fw-bold">Photos</span> based on category</h1>
                 </div>
             </div>
             <div class="row">
@@ -41,10 +41,40 @@
                         praesentium alias optio pariatur assumenda maxime? Laudantium at doloremque libero et.</p>
                 </div>
             </div>
+            <div class="d-flex justify-content-center align-items-center hstack gap-3 mt-5 button-container">
+                    <button class="btn btn-primary category-btn" value="art">Art</button>
+                    <button class="btn btn-primary category-btn" value="commercial">Commercial</button>
+                    <button class="btn btn-primary category-btn" value="nature">Nature</button>
+                    <button class="btn btn-primary category-btn" value="tech">Tech</button>
+                    <button class="btn btn-primary category-btn" value="restaurants">Restaurants</button>
+                    <button class="btn btn-primary category-btn" value="travel">Travel</button>
+            </div>
         </div>
     </header>
 
     <!-- Photos Container -->
+    <section id="photo-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="./pexels-nathan-tran-16776159.jpg" alt="" class="card-image-top">
+                        <div class="card-body">
+                            <h5 class="text-primary text-center">Image Title</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <img src="./pexels-kammeran-gonzalezkeola-9638689.jpg" alt="" class="card-image-top">
+                        <div class="card-body">
+                            <h5 class="text-primary text-center">Image Title</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <script src="./js/bootstrap.bundle.min.js"></script>
