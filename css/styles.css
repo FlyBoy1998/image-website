@@ -3,8 +3,9 @@ body {
 }
 
 header {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../bg-image.jpg");
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../bg-image.jpg");
   background-size: cover;
+  min-height: 750px;
   width: 100% !important;
 }
 
@@ -15,4 +16,12 @@ header {
 
 .fa-brands:hover {
   color: rgb(171, 171, 171);
+}
+
+.navbar {
+  background: #0f0f0f;
+}
+
+.button-container {
+  flex-wrap: wrap;
 }/*# sourceMappingURL=styles.css.map */
