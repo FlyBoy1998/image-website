@@ -44,4 +44,17 @@ header {
   h1 {
     font-size: 60px !important;
   }
+}
+@media screen and (max-width: 1200px) {
+  .card-image-top {
+    height: 40vh !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card {
+    margin: 0 1rem !important;
+  }
+  .card-image-top {
+    height: 45vh !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
