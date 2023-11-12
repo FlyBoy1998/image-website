@@ -4,6 +4,7 @@ const imagesContainer = document.querySelector('.images-container');
 
 let inputData = "";
 let page = 1;
+let results = [];
 
 async function searchImages() {
     inputData = categoryBtns.value;
@@ -11,7 +12,13 @@ async function searchImages() {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
+        results = data.results;
+        console.log(results);
+        results.forEach((result) => {
+            const {id, alt_description, height, slug, urls:{regular: imageLink}} = result;
+            console.log(id, alt_description, height, slug, imageLink);
+        })
+        
     } catch (error) {
         console.log(error);
         alert('Sorry, there was an error!');
