@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../bg-image.jpg");
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../bg-image.jpg");
   background-size: cover;
   min-height: 750px;
   width: 100% !important;
@@ -27,14 +27,24 @@ header {
   flex-wrap: wrap;
 }
 
+.card {
+  display: flex;
+  flex: 0 0 300px;
+}
+
 .card-image-top {
   object-fit: cover;
   width: 100%;
   height: 50vh;
 }
 
-#photo-container {
+.card-body p {
+  font-size: 14px;
+}
+
+.images-container {
   margin-top: -5rem !important;
+  gap: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -43,6 +53,9 @@ header {
   }
   h1 {
     font-size: 60px !important;
+  }
+  .card {
+    flex: 0 0 450px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -56,5 +69,8 @@ header {
   }
   .card-image-top {
     height: 45vh !important;
+  }
+  .card {
+    flex: 0 0 300px;
   }
 }/*# sourceMappingURL=styles.css.map */
