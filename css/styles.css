@@ -23,8 +23,12 @@ header {
   background: #0f0f0f;
 }
 
-.button-container {
-  flex-wrap: wrap;
+.fetch-message {
+  display: none;
+}
+
+.visible {
+  display: block !important;
 }
 
 #images {
@@ -55,18 +59,21 @@ header {
 }
 
 .show-more-btn {
-  display: none !important;
   align-self: center;
   width: 250px;
 }
 
-.visible {
-  display: block !important;
+@media screen and (max-width: 1200px) {
+  .images-container {
+    margin-top: -12rem !important;
+  }
+  .card-image-top {
+    height: 40vh !important;
+  }
 }
-
 @media screen and (max-width: 768px) {
-  #photo-container {
-    margin-top: -8rem !important;
+  .images-container {
+    margin-top: -10rem !important;
   }
   h1 {
     font-size: 60px !important;
@@ -75,12 +82,13 @@ header {
     flex: 0 0 450px;
   }
 }
-@media screen and (max-width: 1200px) {
-  .card-image-top {
-    height: 40vh !important;
-  }
-}
 @media screen and (max-width: 576px) {
+  .header {
+    height: 100vh !important;
+  }
+  .images-container {
+    margin-top: 0 !important;
+  }
   .card {
     margin: 0 1rem !important;
   }
