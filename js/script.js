@@ -2,6 +2,7 @@ import {accessKey} from "./access-key.js";
 
 const categoryBtns = document.querySelectorAll('.category-btn');
 const imagesContainer = document.querySelector('.images-container');
+const showMoreBtn = document.querySelector('.show-more-btn');
 
 let inputData = "";
 let page = 0;
@@ -18,8 +19,8 @@ async function searchImages() {
             const card = document.createElement('div');
             card.setAttribute('class', 'card shadow');
             const image = document.createElement('img');
-            image.setAttribute('src', `${result.urls.regular}`);
-            image.setAttribute('alt', `${result.alt_description}`);
+            image.setAttribute('src', result.urls.regular);
+            image.setAttribute('alt', result.alt_description);
             image.setAttribute('class', 'card-image-top');
             const cardBody = document.createElement('div');
             cardBody.setAttribute('class', 'card-body');
@@ -39,7 +40,16 @@ async function searchImages() {
 }
 
 categoryBtns.forEach((btn) => btn.addEventListener('click', () => {
+    imagesContainer.innerHTML = '';
     inputData = btn.value;
     page = Math.floor(Math.random() * 100);
+    showMoreBtn.classList.add('visible');
+    showMoreBtn.setAttribute('value', inputData);
+    showMoreBtn.addEventListener('click', () => {
+        page = Math.floor(Math.random() * 100);
+        searchImages();
+    })
     searchImages();
+    
 }));
+
