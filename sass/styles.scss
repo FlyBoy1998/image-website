@@ -30,11 +30,7 @@ header {
 }
 
 .fetch-message {
-    display: none;
-}
-
-.visible {
-    display: block !important;
+    color: rgb(0, 198, 0) !important;
 }
 
 #images { 
@@ -60,7 +56,7 @@ header {
 }
 
 .images-container {
-    margin-top: -5rem !important;
+    margin-top: -10rem !important;
     gap: 30px;
 }
 
