@@ -10,12 +10,16 @@ header {
   width: 100% !important;
 }
 
-.fa-brands {
+.fa-brands .fa-house {
   font-size: 3rem;
   transition: color 0.5s ease;
 }
 
 .fa-brands:hover {
+  color: rgb(171, 171, 171);
+}
+
+.fa-house:hover {
   color: rgb(171, 171, 171);
 }
 

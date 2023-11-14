@@ -12,12 +12,16 @@ header {
     width: 100% !important;
 }
 
-.fa-brands {
+.fa-brands .fa-house {
     font-size: 3rem;
     transition: color .5s ease;
 }
 
 .fa-brands:hover {
+    color: rgb(171, 171, 171);
+}
+
+.fa-house:hover {
     color: rgb(171, 171, 171);
 }
 
@@ -65,10 +69,7 @@ header {
     width: 250px;
 }
 
-
 // MEDIA QUERIES
-
-
 
 @media screen and (max-width: 1200px) {
     .images-container {
