@@ -3,6 +3,7 @@ import {accessKey} from "./access-key.js";
 const categoryBtns = document.querySelectorAll('.category-btn');
 const imagesContainer = document.querySelector('.images-container');
 const showMoreBtn = document.querySelector('.show-more-btn');
+const fetchMessage = document.querySelector('.fetch-message');
 
 let inputData = "";
 let page = 0;
@@ -13,7 +14,6 @@ async function searchImages() {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
         results = data.results;
         results.forEach((result) => {
             const card = document.createElement('div');
@@ -31,6 +31,8 @@ async function searchImages() {
             cardBody.appendChild(imageDescription);
             card.append(image, cardBody);
             imagesContainer.appendChild(card);
+
+            showMoreBtn.classList.remove('d-none');
         })  
     } catch (error) {
         console.log(error);
@@ -43,7 +45,6 @@ categoryBtns.forEach((btn) => btn.addEventListener('click', () => {
     imagesContainer.innerHTML = '';
     inputData = btn.value;
     page = Math.floor(Math.random() * 100);
-    showMoreBtn.classList.add('visible');
     showMoreBtn.setAttribute('value', inputData);
     showMoreBtn.addEventListener('click', () => {
         page = Math.floor(Math.random() * 100);
