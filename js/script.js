@@ -32,6 +32,10 @@ async function searchImages() {
             card.append(image, cardBody);
             imagesContainer.appendChild(card);
 
+            fetchMessage.classList.remove('d-none');
+            setTimeout(() => {
+                fetchMessage.classList.add('d-none');
+            }, 2000);
             showMoreBtn.classList.remove('d-none');
         })  
     } catch (error) {
@@ -43,6 +47,7 @@ async function searchImages() {
 
 categoryBtns.forEach((btn) => btn.addEventListener('click', () => {
     imagesContainer.innerHTML = '';
+    showMoreBtn.classList.add('d-none');
     inputData = btn.value;
     page = Math.floor(Math.random() * 100);
     showMoreBtn.setAttribute('value', inputData);
