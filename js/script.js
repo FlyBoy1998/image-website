@@ -1,4 +1,5 @@
-const accessKey = 'Kw_BmOOlg4gdPax5vX45B79YPsE4kRScQBi2_ZdtVoY';
+import {accessKey} from "./access-key.js";
+
 const categoryBtns = document.querySelectorAll('.category-btn');
 const imagesContainer = document.querySelector('.images-container');
 
@@ -12,11 +13,12 @@ async function searchImages() {
     try {
         const response = await fetch(url);
         const data = await response.json();
+        console.log(data);
         results = data.results;
         console.log(results);
         results.forEach((result) => {
-            const {id, alt_description, height, slug, urls:{regular: imageLink}} = result;
-            console.log(id, alt_description, height, slug, imageLink);
+            const {alt_description, urls:{regular: imageLink}} = result;
+            console.log(alt_description, imageLink);
         })
         
     } catch (error) {
